@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Portal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Job Portal</h1>
+
+    <div id="form-toggle">
+      <button onclick="showForm('login')">Login</button>
+      <button onclick="showForm('register')">Register</button>
+    </div>
+
+    <div id="login-form" class="form">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="register-form" class="form" style="display: none;">
+      <h2>Register</h2>
+      <input type="text" id="reg-username" placeholder="Username" required>
+      <input type="password" id="reg-password" placeholder="Password" required>
+      <select id="reg-role">
+        <option value="jobseeker">Job Seeker</option>
+        <option value="recruiter">Recruiter</option>
+      </select>
+      <button onclick="register()">Register</button>
+    </div>
+
+    <div id="dashboard" class="dashboard" style="display: none;">
+      <h2>Welcome, <span id="user-name"></span>!</h2>
+      <p>You are logged in as <strong><span id="user-role"></span></strong>.</p>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
